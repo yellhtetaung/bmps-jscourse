@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Challenge 3</title>
+  <style>
+    body {
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    li span,
+    h1 {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Coding Challenge 3</h1>
+    <ul>
+      <li>
+        There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with
+        the
+        highest average score wins the trophy!
+      </li>
+    </ul>
+    <ul style="list-style: number;">
+      <li>
+        Calculate the average score for each team, using the test data below
+      </li>
+      <li>
+        Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't
+        forget that there can be a draw, so test for that as well (a draw means they have the same average score).
+      </li>
+      <li>
+        <span>Bonus 1: </span>include a requirement for a minimum score of 100. With this rule, a team only wins if it
+        has a higher score than the other team, and at the same time a score of at least 100 points. <span>Hint: </span>
+        Use a logical operator to test for a minimum score, as well as multiple else-if blocks
+      </li>
+      <li>
+        <span>Bonus 2: </span>Minimum score also applies to a draw! So a draw only happens when both teams have the some
+        score and both have a score greater or equal to 100 points. Otherwise, no team wins the trophy.
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <span>Test data: </span>Dolphins score 96, 108, and 89. Koalas score 88, 91, and 110
+      </li>
+      <li>
+        <span>Test Data Bonus 1: </span>Dolphins score 97, 112, and 101. Koalas score 109, 95, and 123.
+      </li>
+      <li>
+        <span>Test Data Bonus 2: </span>Dolphins score 97, 112, and 101. Koalas score 109, 95, and 106
+      </li>
+    </ul>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

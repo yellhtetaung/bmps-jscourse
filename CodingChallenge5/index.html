@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Challenge 5</title>
+  <style>
+    body {
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    h1,
+    li span {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Coding Challenge 5</h1>
+    <ul style="list-style: number;">
+      <li>
+        Create an arrow function "calcAverage" to calculate the average of 3 scores
+      </li>
+      <li>
+        Use the function to calculate the average for both teams
+      </li>
+      <li>
+        Create a function 'checkWinner' that takes the average scroe of each team as parameters ('avgDolhins' and
+        'avgKoalas'), and then logs the winner to the console, together with the vicotry points, according to the rule
+        above. Example: "Koalas win (30 vs 13)"
+      </li>
+      <li>
+        Use the 'checkWinner' function to determine the winner for both DATA 1 and DATA 2
+      </li>
+      <li>
+        Ignore draws this time.
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <span>Test data 1: </span>Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+      </li>
+      <li>
+        <span>Test data 2: </span>Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+      </li>
+      <li>
+        <span>Hint: </span>To calculate average of 3 values, add them all together and divide by 3
+      </li>
+      <li>
+        <span>Hint: </span>To check if number A is at least double number B, check for A >= 2 * B. Apply this to the
+        team's average scores
+      </li>
+    </ul>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

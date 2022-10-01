@@ -1,0 +1,444 @@
+BMPS Javascript Basic To Advance
+
+alert("Hello World") သည် javascript ရဲ့ function ဖြစ်တယ်။
+
+=> Javascript 
+
+Javascript is a high-level, object-oriented, multi-paradigm programming language.
+
+objcet-oriented = object base ထားပြီး data တွေကို သိမ်း language ဖြစ်တယ်။
+
+3 core technology is using html, css, javascript
+
+ES = ECMAScript
+ES5 = ECMAScript
+ES6 = Modern JavaScript
+
+let js = "amazing";
+
+= = asign
+; = line end
+
+console.log() is javascript of special function
+
+=> Values and Variable
+
+"Mg Mg", 25 = value/ literal value
+
+Value တွေကို Variable တွေထဲမှာ ထည့်သိမ်းလို့ရတယ်။
+
+=> Variable Declare
+
+let firstName = "Hello";
+
+let = keyword
+firstName = variable name
+"Hello" = value
+= = assigment operator
+
+Naming Conversion
+
+fullName
+full_name
+_fullname
+
+=> Data Types
+
+1. Number: Floating Point numbers => Used for decimas and integers (let age = 23;) 
+
+2. String: Sequence of charaters => Used for text (let firstName = 'Jonas';)
+
+3. Boolean: Logical type that can only be true or false => Used for taking decisions (let fullAge = true)
+
+4. Undefined (empty value)
+
+5. Null
+
+6. Symbol (release 2015)
+
+7. Big Int (release 2021)
+
+=> Undefined 
+
+Variable declare လုပ်ပြီးတဲ့အချိန်မှာ value တစ်ခုကို assign မလုပ်ရသေးတဲ့ အခါမှာ undefined ဖြစ်တယ်။
+
+let helloTest; // undefined
+
+Javascript မှာ variable တွေကိုတည်ဆောက်တဲ့အခါမှာ dynamic styling နဲ့တည်ဆောက်တယ်။
+
+* = Asterisk
+
+=> Keyword
+
+1. let (ES6) (value တွေကို change လို့ရတယ်။ keyword ကို တော့ ပြန်ခေါ်လို့မရဘူး။)
+
+2. const (ES6) (assign လုပ်ထားတဲ့ value တွေကို change လို့မရဘူး) (immutable variable/ empty variable)
+
+3. var
+
+variable ထဲမှာရှိတဲ့ value တွေ change သွားတာကို mutation ဖြစ်တယ်လို့ ခေါ်ပါတယ်။
+value change တာကို mutate လုပ်တယ်လို့ ခေါ်ပါတယ်။
+
+=> Basic Operator
+
+Operator ရဲ့ လုပ်ဆောင်ချက်က value တွေကို ပြောင်းလဲသွားစေနိုင်သလို value အများကြီးကိုလည်း တစ်ခုတည်းဖြစ်အောင် လုပ်ဆောင်ပေးနိုင်တယ်။
+
+=> Arithematic Operator / Mathematic Operactor
+
++, -, *, / , =, +=, -=, *=, /=, ++, --
+
+=> Comparison Operator (return true, false)
+
+==, ===, !=, !==, > , < , >=, <=
+
+=> if else statement (if else control structure)
+
+if(condition){
+  code to be executed
+} else{
+  code to be executed
+}
+
+=> Type Conversion and Coercion
+
+Conversion = value တွေကို တစ်မျိုးကနေ တစ်မျိုးကို manual ပြောင်းပေးတာ
+
+Coercion = value တွေ တစ်မျိုးကနေ တစ်မျိုးကို သူ့အလိုလို ပြောင်းလဲသွားဖြစ်တယ်။ + sign မှာပဲ အလုပ်လုပ်မယ်။ ကျန်တာတွေအားလုံးသည် number ကိုပြောင်းပေးတယ်။
+
+=> Truthy and Falsy Value 
+
+Falsy Value
+-------------
+1. 0 (Zero)
+2. '' (Empty String)
+3. undefined
+4. Null 
+5. NaN (Not a Number)(Number Data Type)
+
+=> Boolean Logic ( true / false )
+
+Logical Operator 
+-----------------
+
+1. And && ( value နှစ်ခုစလုံး true ဖြစ်မှ true ဖြစ်မယ် )
+2. Or ||  ( value တစ်ခု true ဖြစ်ရင် true ဖြစ်မယ် )
+3. Not ! ( ဆန့်ကျင်ဘက် value ပြောင်းချင်ရင် သုံးတယ် )
+
+=> Switch Statement 
+switch(condition 1){
+  case "condition 2":
+    code to be executed;
+    break;
+  case "condition 2":
+    code to be executed;
+    break;
+  default:
+    code to be executed;
+}
+
+=> Statements and Expressions
+
+Expression is a piece of code that produce a value. (ကိုယ်ပိုင် value ထုတ်ပေးနိုင်တာကို expression လို့ခေါ်တယ်။)
+Template literal can be use expression and can't be use statement.
+3 + 4 = 7
+1990
+true && false && !true = false 
+
+Statement is a bigger piece of code that is executed and which does not produce a value on itself
+
+=> The Conditional (Ternary) Operator 
+              condition true        condition false
+condition ? code to be executed : code to be executed 
+
+-------------------------------------------------------------------------------
+=> JavaScript Release ES5 ES6+ and ESNext
+
+1995 
+=> Brendan Eich creates the very first version of JavaScript in just 10 days. It was called Mocha, but already had many fundamental features of modern JavaScript!
+
+1996 
+=> Mocha changes to LiveScript and the to JavaScript, in order to attract Java developers. However, JavaScript has almost nothing to do with Java 
+=> Microsoft launches IE, copying JavaScript from Netscape and calling it JScript;
+
+1997
+=> With a need to standardize the language, EcMA releases ECMAScript 1 (ES1), the first offical standard for JavaScript (ECMAScript is the standard, JavaScript the language in practice);
+
+2009
+=> ES5 (ECMAScript 5) is released with lots of great new features;
+
+2015
+=> ES6/ES2015 (ECMAScript 2015) was released: the biggest update to the language ever!
+=> ECMAScript changes to an annual release cycle in order to ship less features per update
+
+2016 - 
+=> Release of ES2016 / ES2017/ ES2018 / ES2019/ ES2020 / ES2021 / ... / ES2089
+-------------------------------------------------------------------------------
+
+=> Equality Operators == and ===
+
+== equal to (same value or same datatype)
+=== equal equal to (same value and datatype)
+
+=> Strict Mode
+
+'use strict';
+
+=> Functions
+Function is a piece of code 
+
+function name(){
+  code to be executed
+}
+name(); = invoking function
+
+function name(parameter, parameter){
+  code to be executed
+}
+name(5,0) = (5,0)= function argument
+
+function သည် မတူညီတဲ့ input value တွေကို လက်ခံနိုင်တယ်။ အဲ့လက်ခံလိုက်တဲ့ input value တွေကို မူတည်ပြီးတော့ function body ထဲမှာ process လုပ်တယ်။ အဲ့ value တွေကို မူတည်ပြီးတော့ output ပြန်ထုတ်ပေးတယ်။ function သည် အနည်းဆုံးတစ်ကြိမ်တော့ ပြန်ခေါ်သုံးပေးရတယ်။ invoke မလုပ်၍ အလုပ်မလုပ်ပါဘူး။
+
+function သည် value တွေကို return ပြန် မပေးနိုင်ဘူး။ ထို့ကြောင့် return keyword သုံးပြီးတော့ return ပြန်ပေးရတယ်။ 
+
+
+=> Function Declaration and Function Expression
+
+Function Declaration
+---------------------
+function name(){
+  code to be executed
+}
+name();
+
+Function Expression
+--------------------
+            anonymous function
+const name = function(){
+  code to be executed
+}
+name();
+
+=> Arrow Function
+
+()=>{
+  code to be executed
+}
+
+(parameter) => code to be executed
+
+တစ်ကြောင်းတည်းဆို return ပြန်ပေးစရာမလိုဘူး။ တစ်ကြောင်းထပ်ပိုရင်တော့ return ပြန်ပေးရမယ်။
+
+=> Function Calling Other Function 
+
+function fruitCutter(fruits) {
+  return fruits * 4;
+}
+
+function fruitProcesser(apples, oranges) {
+  const applePieces = fruitCutter(apples);
+  const orangePieces = fruitCutter(oranges);
+
+  console.log(apples, oranges);
+  // console.log(applePieces, orangePieces);
+
+  const juice = `This juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
+
+fruitProcesser(2, 3);
+
+function must follow dry(don't repeat yourself) principle
+
+=> Review Functions
+
+-1 is standard number of programming.
+
+return တွေသည် function တွေကို ရုတ်တရက်ရပ်လိုက်တာဖြစ်တယ်။
+
+=> Introduction To Array
+
+JavaScript မှာ data တွေထည့်သိမ်းဖို့အတွက် Data Structure ဆိုတာ ရှိပါတယ်။
+Two Type of Data Structure are Array and Object.
+
+Array can be store diffetent data type.
+array ထဲမှာဆိုရင် value(data) တွေကို element လို့ခေါ်တယ်။
+
+const variablename = [value, value, value];
+const variablename = new Array(value, value, value); (array of literal syntax)
+array.length;
+array.length -1; = get last index number
+
+Replace array value
+--------------------
+array[index number] = value;
+
+array ထဲမှာ array ထပ်ထည့်ထားတာကို nested array လို့ခေါ်တယ်။
+
+=> Basic Array Operators(Methods)
+
+Push Method
+------------
+
+array.push(argument);
+push method က array တစ်ခုရဲ့နောက်ဆုံးမှာ element တစ်ခုထပ်ပေါင်းပေးတယ်။ မူလ orginal array ကို ထိခိုက်အောင်ပြောင်းလဲတယ်။
+push သည် function တစ်ခုဖြစ်ပြီးတော့ သူ့ထဲမှာ argument ရှိတယ်။ အဲ့ argument သည် attach လုပ်ထားတဲ့ array ရဲ့နောက်ဆုံး element မှာ တစ်ခုထပ်ပေါင်းထည့်ပေးတယ်။
+
+Unshift Method
+---------------
+
+array.unshift(argument);
+unshift method က array တစ်ခုရဲ့ အရှေ့ဆုံးမှာ element တစ်ခုထပ်ပေါင်းပေးတယ်။ မူလ orginal array ကို ထိခိုက်အောင်ပြောင်းလဲတယ်။
+
+Pop Method 
+----------
+
+array.pop();
+pop method က array တစ်ခုရဲ့နောက်ဆုံးက element ကိုဖျက်ထုတ်ပေးတယ်။ မူလ orginal array ကို ထိခိုက်အောင်ပြောင်းလဲတယ်။
+
+Shift Method 
+-------------
+
+array.shift();
+shift method က array တစ်ခုရဲ့ ရှေ့ဆုံးက element ကိုဖျက်ထုတ်ပေးတယ်။ မူလ orginal array ကို ထိခိုက်အောင်ပြောင်းလဲတယ်။
+
+indexOf Method 
+---------------
+
+array.indexOf(argument);
+indexOf method က array တစ်ခုမှာရှိတဲ့ index number ကိုရှာချင်တဲ့အခါ element ကိုပေးပြီးရှာတာဖြစ်ပါတယ်။
+
+Includes Method (return true/false)
+---------------
+
+array.includes(argument);
+array ထဲမှာ လိုချင်တဲ့ value ရှိမရှိကို တိုက်စစ်ချင်တဲ့အခါမှာ includes method ကိုသုံးတယ်။ ၎င်း value သည် data type ရော value ကောတူမှ true return ပြန်တယ်။ 
+
+=> Introduction to Object
+
+const name = {key: value, key: value, key: value} (objcet of literal syntax)
+key: value = properties
+
+=> Dot and Bracket Notation
+
+Dot Notation
+--------------
+object.propertyname;
+Dot notation ရဲ့နောက်မှာ final name တွေပဲလိုက်တယ်။
+
+Bracket Notation 
+-----------------
+object['property name'];
+Bracket Notation ရဲ့နောက်မှာ အစားသွင်းထားတဲ့ name တွေလိုက်လို့ရတယ်။
+
+const nameKey = 'Name';
+console.log(personalObject["first" + nameKey]);
+"first" + nameKey = expression
+
+const interstIn = prompt(
+  "What do you want to know about personalObject? Choose between firstName, lastName, age, job, friends"
+);
+console.log(interstIn);
+console.log(personalObject[interstIn]);
+
+=> Object Methods
+
+Object ထဲမှာ ရေးထားတဲ့ function ကို method လို့ခေါ်ပါတယ်။ ဘယ် function မဆို object ထဲမှာ ရေးရင် method ဖြစ်သွားပါတယ်။ parameter မလိုတဲ့ object method ကို ပြန်ခေါ်သုံးမယ်ဆိုရင် this ကိုပြန်ခေါ်သုံးတယ်။ this သည် current object ကို ပြန်ညွှန်းပါတယ်။
+
+eg....
+
+const bmps = {
+  firstName: "BMPS",
+  lastName: "Education Center",
+  birthYear: 1991,
+  job: "Js Developer",
+  friends: ["Michal", "Peter", "Steven"],
+  hasDriverLicense: true,
+  calcAge: function (birthYear) {
+    return 2022 - birthYear;
+  },
+};
+
+console.log(bmps.calcAge(bmps.birthYear)); // 31 dot notation
+console.log(bmps["calcAge"](bmps.birthYear)); // 31 bracket notation
+
+=> Iteration The For Loop
+
+Loop သည် အလုပ်တစ်ခုကို ခိုင်းစရာမလိုပဲ ထပ်တလဲလဲ လုပ်တဲ့ process ဖြစ်တယ်။ 
+Programming မှာ database က data တွေကို ဆွဲထုတ်တဲ့ အခါမှာ အကြိမ်ကြိမ်ထုတ်ရတာဖြစ်တဲ့အတွက်ကြောင့် loop တွေသုံးပြီးတော့ ဆွဲထုတ်တယ်
+
+for(start point; end point; increment/decrement ){
+  code to be executed;
+}
+
+=> Looping Arrays, Breaking and Continuing
+
+continue; အဲ့နေရာရောက်ရင် ကျော်ပြီးအလုပ်ဆက်လုပ်မယ်။
+break; အဲ့နေရာရောက်ရင် ရပ်ပလိုက်တယ်
+
+=> Looping Backwards and Loops in Loops
+
+Backward Loop
+--------------
+for(start point, end point, i--){
+  code to be executed
+}
+
+const bmpsArray = [
+  "BMPS",
+  "Education Center",
+  2022 - 2021,
+  "Developer",
+  ["JavaScript", "PHP", "Flutter"],
+];
+
+for (let i = bmpsArray.length - 1; i >= 0; i--) {
+  console.log(bmpsArray[i]);
+}
+
+Loop in Loop 
+-------------
+
+for(start point; end point; increment/decrement){
+  code to be executed;
+  for(start point; end point; increment/decrement){
+    code to be executed;
+  }
+}
+
+=> While Loop
+
+start point 
+while(end point){
+  code to be executed;
+  increment/decrement
+}
+
+
+
+
+
+
+
+
+builtin Function 
+-----------------
+
+console.log();
+console.warn();
+console.error();
+console.table();
+window.alert();
+alert();
+Number();
+String();
+new Array();
+push();
+unshift();
+pop();
+shift();
+includes();
+indexOf();
+
+builtin properties name
+---------------
+.length;
