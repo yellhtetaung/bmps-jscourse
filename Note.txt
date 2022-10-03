@@ -413,12 +413,23 @@ while(end point){
   increment/decrement
 }
 
+=> What is DOM and DOM Manipulation
 
+DOM
+----
+DOCUMENT OBJECT MODEL: Structure representation of html documents. Allows javascript to access html elements and styles to manipulate them.
 
+DOM ကို သုံးမယ်ဆိုရင် doucment ဆိုတာကို သုံးပေးရတယ်။
 
+DOM and DOM Method တွေက web api အမျိုးအစားတစ်မျိုးဖြစ်တယ်။
 
+html code တွေကို javascript ကနေ ပြန်ပြင်လိုက်တာ DOM manipulation လုပ်တယ်လို့ခေါ်တယ်။
 
+=> Handling Click Event
 
+selector.addEventListener('click', function(){
+  code to be executed
+})
 
 builtin Function 
 -----------------
