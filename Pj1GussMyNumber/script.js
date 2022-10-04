@@ -8,27 +8,32 @@
 // document.querySelector('.number').textContent = 15;
 // document.querySelector('.guess').value = 10;
 
-const luckyNumber = Math.trunc(Math.random() * 20) + 1;
+let luckyNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-document.querySelector('.number').textContent = luckyNumber;
+let highScore = 0;
+
+const displayMessage = message => {
+  document.querySelector('.message').textContent = message;
+};
 
 document.querySelector('.check').addEventListener('click', () => {
   const guessNumber = Number(document.querySelector('.guess').value);
   if (!guessNumber) {
-    document.querySelector('.message').textContent = 'No Number ...';
+    displayMessage('No Number ...');
   } else if (guessNumber === luckyNumber) {
-    document.querySelector('.message').textContent = 'Correct Number ...';
-  } else if (guessNumber > luckyNumber) {
-    if (score > 0) {
-      document.querySelector('.message').textContent = 'Too High Number ...';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'You Lose The Game ...';
+    displayMessage('Correct Number ...');
+    document.querySelector('body').style.background = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.number').textContent = luckyNumber;
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
     }
-  } else if (guessNumber < luckyNumber) {
+  } else if (guessNumber !== luckyNumber) {
     if (score > 0) {
-      document.querySelector('.message').textContent = 'Too Low Number ...';
+      displayMessage(
+        guessNumber > luckyNumber ? 'Too High Number ...' : 'Too Low Number ...'
+      );
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -37,4 +42,15 @@ document.querySelector('.check').addEventListener('click', () => {
   } else {
     document.querySelector('.message').textContent = 'Incorrect Number ...';
   }
+});
+
+document.querySelector('.again').addEventListener('click', () => {
+  displayMessage('Start guessing...');
+  document.querySelector('body').style.background = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  score = 20;
+  luckyNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.score').textContent = score;
 });

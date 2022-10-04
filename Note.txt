@@ -431,6 +431,12 @@ selector.addEventListener('click', function(){
   code to be executed
 })
 
+=> Handling and ESC Key 
+e.key = return string 
+
+
+
+
 builtin Function 
 -----------------
 
