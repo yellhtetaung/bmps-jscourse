@@ -432,7 +432,138 @@ selector.addEventListener('click', function(){
 })
 
 => Handling and ESC Key 
-e.key = return string 
+e.key = return string
+
+=> An High Level Overview of JavaScript 
+
+Javascript is a high-level, object-oriented, multi-paradigm programming language.
+
+Javascript is a high-level, prototype-based object-oriented, multi-paradigm, interpreted of just-in-time compiled, dynamic, single-threaded, garbage-collected programming language with first-class functions and a non-blocking event loop concurrency model.
+
+High-level = can't management. easy to learn. high-level programming language is slower than low-level programming language 
+
+Garbage-collected = program မှာ မသုံးပဲ ထားတဲ့ function တွေကို memory ကနေ အလိုလျှောက်ရှင်းလင်းပေးတယ်။
+
+interpreted or just-in-time compiled = javascript code to machine code ကို convert လုပ်တာကို compile လုပ်တယ်လို့ခေါ်တယ်။
+
+Multi-paradigm
+---------------
+
+Paradigm: An approach and mindset of structuring code, which will direct your coding style and technique.
+
+1. Procedural programming 
+2. Object-oriented programming (OOP)
+4. Functional programming (FP)
+
+Prototype-based object-oriented = JavaScript သည် object base ကို အခြေခံထားတဲ့ အတွက်ကြောင့်ဖြစ်တယ်။
+
+First-class Function
+--------------------
+
+In a language with first-class functions, functions are simply treated as variables. We can pass them into other functions, and return them from functions.
+
+Dynamic 
+-------
+
+Dynamically-type language
+
+=> The JavaScript Engine and Runtime 
+
+Js engine program that ececutes javascript code
+
+Js Engine 
+-----------
+
+1. Call Stack
+2. Heap
+
+JavaScript code line တစ်ကြောင်းချင်းစီးက execution လုပ်ဖို့အတွက် call stack ထဲကို ရောက်ပါတယ်။ အဲ့ဒါကို execution context လို့ခေါ်ပါတယ်။ code တွေက execution context ဖြစ်ပြီးနောက်ပိုင်းမှာ mechine code အဖြစ်ပြောင်းသွားတယ်။
+
+Compilation: Entire code is converted into machine code at once, and writen to a binary file that can be executed by a computer.
+
+Source Code == step 1(compilation)==> Portable file(machine code) == step2(execution)==> Program running
+--------------------------------------------------------------------------------------------------------------------------------
+
+Interpretation: Interpreter runs through the source code and exectes it line by line.
+
+Source code == step 1(execution line by line)==> Program running
+--------------------------------------------------------------------------------------------------------------------------------
+
+Just-in-time(JIT) compilation: Entire code is converted into machine code at once, then executed immediately.
+
+Source cdoe ==step1(compilation)==> Machine Code ==step2(execution)==> Program running
+--------------------------------------------------------------------------------------------------------------------------------
+
+Web apis တွေက JavaScript functions တွေပဲဖြစ်တယ်။ Web apis တွေသည် JavaScript အလုပ်လုပ်ဖို့အတွက် runtime ဖြစ်တယ်။
+
+
+Lexical Scoping 
+
+function scope မှာတွေ့ရတက်တယ်။ parent scope မှာ declare လုပ်ထားတဲ့ variable တွေကို သက်ဆိုင်ရင် function ကနေခေါ်သုံးလို့ရတာကို lexical scoping လို့ခေါ်တယ်။ 
+
+Global Scope 
+-------------
+
+=> Outside of any function or block 
+=> Variable declared in global scope are accessible everywhere
+
+Function Scope
+---------------
+
+=> Variables are assessible onlye inside function, NOT outside
+=> Also called local scope 
+var is function scope
+
+Block Scope ({} = block)
+-----------
+
+=> Variable are assessible only inside block(block scoped)
+=> However, this only applies to let and const variables!
+=> Functions are also block scoped (only in strict mode)
+
+=> Variable Environment Hoisting and The TDZ
+
+Hositing: Makes some types of variables accessible/usable in the code before they are actually declared. "Variables lifted to the top of their scope".
+
+Before execution, code is scanned for variable declarations, and for each variable, a new property is created in the variabel environment object. 
+
+function declarations 
+---------------------
+Hoisted       : Yes 
+Initial value : Actual function 
+Scope         : Block (in strict mode. Otherwise: function!)
+
+var variables 
+--------------
+Hoisted       : Yes
+Initial value : undefined
+Scope         : Function
+
+let and const variables 
+------------------------
+Hoisted       : No (Technically, yes. But not in practice)
+Initial value : <uninitialized>,TDZ (Temporal Dead Zone)
+Scope         : Block
+
+function expressions and arrows 
+--------------------------------
+
+Depends if using var or let/const 
+
+=> Why Hoisting 
+
+1. Using functions before actual declaration;
+2. var hoisting is just a byproduct.
+
+=> Why TDZ 
+
+1. Makes it easier to avoid and catch errors: accessing variables before declaration is bad practice and should be avoided;
+2. Makes const variables actually work
+
+
+
+
+
 
 
 
