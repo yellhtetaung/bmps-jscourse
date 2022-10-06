@@ -515,7 +515,7 @@ Function Scope
 var is function scope
 
 Block Scope ({} = block)
------------
+-------------------------
 
 => Variable are assessible only inside block(block scoped)
 => However, this only applies to let and const variables!
@@ -587,6 +587,115 @@ object ထဲက function ထဲမှာရှိတဲ့ this keyword က သ
 
 Objects Type တွေကို heap ထဲမှာ သွားသိမ်းတယ်။
 Primitives Type တွေကို တော့ call stack ထဲမှာ သိမ်းတယ်။
+
+=> Destructuring Arrays
+
+Destructuring ကို arrays, objects တွေနဲ့တွဲသုံးနိုင်တယ်။
+
+Destructuring Assign 
+---------------------
+const [a,b,c] = [1,2,3]
+
+Default Value in destructuring
+-------------------------------
+const [a = 1, b = 1, c = 1] = [2,3]
+
+JavaScript သည် array နဲ့ destructuring ကို = operator နဲ့ခွဲတယ်.
+
+=> Destructing Object
+
+Object တွေကို destructing နဲ့ပြန်ခေါ်သုံးတဲ့အခါမှာ variable name နဲ့ objcet keyname နဲ့တူနေမှ ရမယ်။ 
+
+const {a,b,c} = object;
+
+Change Variable name 
+--------------------
+const {a: d, b: e, c: f} = object;
+
+=> Spread Operator (...)
+
+Spread operator က array နဲ့အတူတူတွဲသုံးပါတယ်။ array ထဲမှာ ရှိတဲ့ element တွေကို အရင် ဖြန့်ချတယ် ပြီးတော့မှ collect ပြန်လုပ်တယ်။ Iterable တွေအကုန်လုံးထဲမှာ spread operator တွေအလုပ်လုပ်တယ်။ Spread Operator သည် template literal ထဲမှာ ထည့်သုံးလို့မရဘူး။
+
+const arr = [3, 4, 5];
+const newArr = [1, 2, ...arr];
+
+=> Rest Pattern and Parameters
+
+ပြန့်ကျဲနေတဲ့ element တွေကို စုပြီးတော့ array တစ်ခုအနေနဲ့ စုပေးတဲ့ လုပ်ငန်းစဥ်ကိုလုပ်ဆောင်တယ်။ assigment operator ဘယ်ဘက်အခြမ်းမှာရှိနေရင် rest pattern ဖြစ်ပြီး assigment operator ရဲ့ ညာဘက်ခြမ်းမှာရှိနေရင် spread operator ဖြစ်တယ်။ 
+array ထဲမှာ သုံးတာကို rest pattern လို့ခေါ်ပြီးတော့ function ထဲမှာ သုံးတာကို rest parameter လို့ခေါ်တယ်။
+
+const [a, b, ...others] = [1, 2, 3, 4, 5, 6, 7, 8]; (return = 1 2 (6) [3, 4, 5, 6, 7, 8])
+
+function ထဲမှာ ဗြောက်သောက်လက်ခံ argument တွေကို arbitrary amount လို့ခေါ်တယ်။
+
+Arbitrary amount 
+----------------
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3); // 5
+add(2, 3, 5); // 10
+add(8, 7, 5, 6, 3, 1, 4, 7, 9, 5, 3); // 58
+
+=> Short Circuiting
+
+|| (or) / && (and) ၎င်း operator နှစ်ခုကို boolean datatype မှာ မဟုတ်ဘူး ဘယ် datatype နဲ့မဆိုတွဲသုံးလို့ရတယ်။ ဘယ် datatype ကို မဆိုလည်း return ပြန်ပေးတယ်။ အခုလို့ return ပြန်ပေးတာကို short circuiting လို့ခေါ်ပါတယ်။
+
+|| (or) operator သည် သူ့ရဲ့ ဘယ်ဘက် value ကို အရင် ကြည့်တယ်။ သူသည် truthy value or falsy ကိုပဲ return ပြန်ပေးတယ်။ value နှစ်ခုစလုံးက falsy value ဖြစ်နေခဲ့မယ်ဆိုရင် နောက်ဆုံးက falsy value ကို return ပြန်ပေးတယ်။
+
+&& (and) operator သည် ပထမဆုံးစတွေ့တဲ့ value မှာ falsy value ဖြစ်နေမယ်ဆိုရင် အဲ့ falsy value ကိုပဲ return ပြန်ပေးပါတယ်။ နောက်က value က အလုပ်မလုပ်တော့ပါဘူး။ value နှစ်ခုစလုံးက truthy value ဖြစ်နေရင် နောက်ဆုံးက turthy value ကို return ပြန်ပေးတယ်။
+
+=> The Nullish Coalescing Operator (release in 2020)
+
+Nullish value မသတ်မှတ်ထားတဲ့ အချိန်မှ turthy value ကို return ပြန်ပေးတယ်။ 
+
+Nullish Value 2 type 
+--------------------
+1. undefined
+2. null 
+
+restaurant.numGuest = 0;
+const guest2 = restaurant.numGuest ?? 10;
+console.log(guest2); // 0
+
+=> Logical Assigment Operator 
+
+|| (or) assigment opeator
+--------------------------
+restaurant2.numGuest ||= 10;
+
+?? (Nullish coalescing) assigment operator
+------------------------------------------
+restaurant2.numGuest ??= 10;
+
+&& (and) assigment operator 
+-----------------------------
+restaurant2.owner &&= 'Anynomous';
+
+=> Looping Arrays The For Of Loop
+
+စမှတ်ကနေပြီးတော့ လုပ်ငန်းတစ်ခုမပြီး မချင်းကို အကြိမ်ကြိမ် လုပ်နေတာကို iteration လို့ခေါ်တယ်။ တစ်ခြား for loop, while loop တို့လိုပဲ continue, break တို့ အလုပ်လုပ်တယ်။ current index ကိုလည်း လိုအပ်ရင် ဆွဲထုတ်လို့ရတယ်။
+
+for (const item of menu) {
+  console.log(item);
+}
+
+return current index (return array)
+---------------------
+
+for (const item of menu.entries()) {
+  console.log(item);
+}
+
+=> Enhanced Object Literals
+
+object တစ်ခုထဲမှာ declare လုပ်ပြီးသား name တစ်ခုကို ပြန်ခေါ်သုံးတဲ့အခါ ပေးချင်တဲ့ name ချင်းတူနေတဲ့အခါမှာ key: value ရေးပေးစရာမလိုပဲ name တစ်ခုတည်းရေးပေးလို့ရတယ်။ အဲ့ဒါကို Enhanced object literals လို့ခေါ်တယ်။ method ရေးတဲ့အခါမှာလည်း ထိုနည်း၎င်းပဲ key ကြေငြာစရာမလိုပဲ name(){} တည်းရေးလို့ရပါတယ်။ compute properties တွေကို ရေးတဲ့အခါမှာ [] ထဲမှာရေးရတယ်။
+
 
 
 

@@ -158,11 +158,18 @@
 const jsMgMg = {
   firstName: 'JavaScript',
   lastName: 'Mg Mg',
+  language: ['HTML', 'CSS', 'JS', 'Backend Node'],
 };
 
-const pythonMgMg = jsMgMg;
-pythonMgMg.firstName = 'Python';
-console.log(jsMgMg);
-console.log(pythonMgMg);
+// const pythonMgMg = jsMgMg;
+// pythonMgMg.firstName = 'Python';
+// console.log(jsMgMg);
+// console.log(pythonMgMg);
 
 // jsMgMg = {};
+
+const pythonMgMg = Object.assign({}, jsMgMg);
+pythonMgMg.firstName = 'Python';
+pythonMgMg.language.push('Python');
+console.log(pythonMgMg);
+console.log(jsMgMg);

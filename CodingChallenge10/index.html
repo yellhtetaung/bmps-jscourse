@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Challenge 10</title>
+  <style>
+    body {
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    li span,
+    h1 {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Coding Challenge 10</h1>
+    <p>We're building a football betting app (soccer for my American friends)</p>
+    <p>Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the
+      data. So here are your tasks: </p>
+    <ul style="list-style: number;">
+      <li>
+        Create one player array for each team (variables 'players1' and 'player2')
+      </li>
+      <li>
+        The first player in any player array is the goalkeeper and the others are field players. For Bayern Munich(team
+        1) crate one variable('gk') with the goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10
+        field players
+      </li>
+      <li>
+        Create an array 'allPlayers' containing all players of both teams (22 players)
+      </li>
+      <li>
+        During the game, Bayern Munich (team 1) used 3 substitute players. So craete a new array ('players1Final')
+        containing all the original team1 players plus 'Thiago', 'Coutinho' and 'Perisic'
+      </li>
+      <li>
+        Based on the game.odds object, create one variable for each odd (called 'team1', 'draw' and 'team2')
+      </li>
+      <li>
+        Write a function ('printGoals') that receives an arbitrary number of player names (Not an array) and prints each
+        of them to the console, along with hte number of goals that were scored in total (number of player names passed
+        in)
+      </li>
+      <li>
+        The team with the lower odd is more likely to win. Print to the console which team is more likely to win,
+        WITHOUT using an if/else statement or the ternary operator.
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <span>Test data for 6 : </span>Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich' Then, call the
+        function again with players for game.scored
+      </li>
+    </ul>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
