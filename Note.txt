@@ -560,15 +560,37 @@ Depends if using var or let/const
 1. Makes it easier to avoid and catch errors: accessing variables before declaration is bad practice and should be avoided;
 2. Makes const variables actually work
 
+=> The This Keyword 
+
+This keyword က javascript မှာ ခေါ်သုံးထားတဲ့ function ပေါ်မူတည်ပြီးတော့ ပြောင်းပြောင်းသွားတယ်။
+
+this keyword/variabel: Special variable that is created for every execution context(very function). Takes the value of (points to) the "owner" of the function in which the this keyword is used. 
+
+this is NOT static. It depends on how the function is called, and its value is only assigned when the function is actually called.
+
+Method => this =  <Object that is calling the method>
+
+Simple function call => this = undefined (in strict mode! Otherwise: window(in the browser))
+
+Arrow functions(don't get own this) => this = <this of surrounding function (lexical this)>
+
+Event listener => this = <DOM element that the handler is attached to>
+
+this သည် top-level function ထဲမှာဆိုရင် global object ကို သွားထောက်ပါတယ်။
+global object = window object
+
+Arrow function က parent scope ထဲက this keyword ကို ပြန်ညွှန်းတယ်။ 
+
+object ထဲက function ထဲမှာရှိတဲ့ this keyword က သူ့ကိုခေါ်တဲ့ method ရဲ့ parent object ကို ပြန်ညွှန်းတယ်။
+
+=> Primitives and Objects (Primitive vs Reference Types)
+
+Objects Type တွေကို heap ထဲမှာ သွားသိမ်းတယ်။
+Primitives Type တွေကို တော့ call stack ထဲမှာ သိမ်းတယ်။
 
 
 
-
-
-
-
-
-builtin Function 
+builtin Function
 -----------------
 
 console.log();
