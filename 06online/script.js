@@ -3,17 +3,17 @@
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
-  [weekdays[3]]: {
+  thu: {
     open: 12,
     close: 22,
   },
-  [weekdays[4]]: {
+  fri: {
     open: 11,
     close: 23,
   },
-  [`day-${2 + 4}`]: {
+  sat: {
     open: 0, // Open 24 hours
     close: 24,
   },
@@ -48,6 +48,91 @@ const restaurant = {
     console.log(otherIng);
   },
 };
+
+// const rest = new Map();
+// rest.set('name', 'Mahar Myanmar');
+// rest.set(1, 'Yangon,Myanmar');
+// console.log(rest.set(2, 'Bangkok,  Thiland'));
+
+// const time = 24;
+
+// rest
+//   .set('categories', ['Italian', 'Pizzeriz', 'Vegaration', 'Organic'])
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, 'We are opening now')
+//   .set(false, 'We are close now');
+
+// const bool = rest.get(time > rest.get('open') && time < rest.get('close'));
+// console.log(bool);
+
+// console.log(rest.has('categories'));
+// rest.delete(1);
+// console.log(rest);
+// console.log(rest.size);
+// rest.clear();
+// console.log(rest);
+
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+
+// const orderSet = new Set([
+//   'Pasta',
+//   'Pizza',
+//   'Pizza',
+//   'Risotto',
+//   'Pasta',
+//   'Pizza',
+// ]);
+// console.log(orderSet); // return {'Pasta', 'Pizza', 'Risotto'}
+// console.log(orderSet.size);
+// console.log(orderSet.has('Pizza'));
+// console.log(orderSet.has('Bread'));
+// console.log(orderSet.add('Gralic Bread'));
+// for (const order of orderSet) {
+//   console.log(order);
+// }
+
+// const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter'];
+// const uniqueStaff = new Set(staff);
+// const positionArr = [...uniqueStaff];
+// console.log(uniqueStaff);
+// console.log(positionArr);
+
+// console.log(orderSet.delete('Risotto'));
+// orderSet.clear();
+// console.log(orderSet);
+
+// const strSet = new Set('BMPS');
+// console.log(strSet);
+// console.log(strSet.size);
+
+// const property = Object.keys(openingHours);
+// let str = `We are open on ${property.length} days`;
+// for (const day of Object.keys(openingHours)) {
+//   str += ` ${day}, `;
+// }
+
+// console.log(str);
+
+// const objValue = Object.values(openingHours);
+// console.log(objValue);
+
+// const objEntries = Object.entries(openingHours);
+
+// for (const [key, { open, close }] of objEntries) {
+//   console.log(`This is key ${key}. We open at ${open} and close at ${close}`);
+// }
+
+// if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+// console.log(restaurant.openingHours.mon?.open);
+
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open ?? 'closed';
+//   console.log(`On ${day} open ad ${open}`);
+// }
+
+// console.log(restaurant.order?.(0, 1));
 
 // console.log(restaurant.openingHours);
 

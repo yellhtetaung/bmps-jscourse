@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Challenge 10</title>
+  <style>
+    body {
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    span,
+    h1 {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Coding Challenge 11</h1>
+    <ul style="list-style: number;">
+      <li>
+        Loop over the game.scored array and print each player name to the console, along with the goal number (Example:
+        "Goal 1: Lewandowski")
+      </li>
+      <li>
+        Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages,
+        you can go check if you don't remember)
+      </li>
+      <li>
+        Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+        <ul>
+          <li>Odd of victory Bayern Munich: 1.33</li>
+          <li>Odd of draw: 3.25</li>
+          <li>Odd of victory Borrussia Dortmund: 6.5</li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      Get the team names directly from the game object, don't hardcode them (except for "draw"). <span>hint: </span>Note
+      hwo the odds and the game objects have the smae property names
+    </p>
+    <ul>
+      <li>
+        <span>Bonus: </span>Create an object called 'scorers' which contains the names of the players who scored as
+        properties, and the number of goals as the value. In this game, it will look like htis:
+        <pre style="font-size: 16px;">
+          {
+          Gnarby: 1,
+          Hummels: 1,
+          lewandowski: 2
+          }
+        </pre>
+      </li>
+    </ul>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

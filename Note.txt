@@ -696,7 +696,72 @@ for (const item of menu.entries()) {
 
 object တစ်ခုထဲမှာ declare လုပ်ပြီးသား name တစ်ခုကို ပြန်ခေါ်သုံးတဲ့အခါ ပေးချင်တဲ့ name ချင်းတူနေတဲ့အခါမှာ key: value ရေးပေးစရာမလိုပဲ name တစ်ခုတည်းရေးပေးလို့ရတယ်။ အဲ့ဒါကို Enhanced object literals လို့ခေါ်တယ်။ method ရေးတဲ့အခါမှာလည်း ထိုနည်း၎င်းပဲ key ကြေငြာစရာမလိုပဲ name(){} တည်းရေးလို့ရပါတယ်။ compute properties တွေကို ရေးတဲ့အခါမှာ [] ထဲမှာရေးရတယ်။
 
+=> Optional Chining (ES2020)
 
+console.log(restaurant.openingHours?.mon?.open);
+
+=> Looping Objects Object Keys Value and Entries 
+
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
+}
+
+Object.keys(object); //return array 
+Object တစ်ခုရဲ့ key တွေချည်းပဲလိုချင်ရင် သုံးတယ်။ 
+
+Object.values(object); // return value
+Object.entries(object); // return key and value 
+
+=> Set 
+
+Set ဆိုတာ unique value တွေကို စုပေးထားတဲ့ data structure တစ်ခုဖြစ်ပါတယ်။ set ထဲမှာ သိမ်းထားတဲ့ data တွေထဲမှာ ထပ်တူကျတဲ့ value တွေမရှိပါဘူး။ set မှာ key value တွေမရှိဘူး။ 
+
+new Set(); // constructor function 
+
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet); // return {'Pasta', 'Pizza', 'Risotto'}
+
+သူ့ထဲမှာပါတယ် အရေအတွက်ကို ကြည့်ချင်ရင် (same array.length)
+console.log(orderSet.size);
+
+element ရှိမရှိစစ်ချင်ရင် 
+console.log(orderSet.has(value));
+
+orderSet.add();
+orderSet.delete();
+orderSet.clear();
+
+Set ထဲက data ကို ပြန်ထုတ်လို့မရပါဘူး။
+
+=> Maps Functional
+
+Maps သည် project ရေးတဲ့ နေရာတွင်ပိုပီးတော့ အသုံးဝင်တယ်။ Maps သည် JavaScript ရဲ့ Data Structure တစ်ခုဖြစ်ပြီးတော့ သူ့ရဲ့ Data ဖွဲ့စည်းပုံသည် key တွေ value တွေနဲ့ ဖွဲ့စည်းထားတယ်။ Object နဲ့ Data ဖွဲ့စည်းပုံတူပါတယ်။ Maps မှာတော့ key တွေကို ကြိုက်တာနဲ့ ပေးလို့ရတယ်။ ကန့်သတ်ချက်တွေမရှိပါဘူး။ Maps ကိုရေးရင် Set တုန်းကလိုပဲ constructor function ကို သုံးပြီးတော့ရေးပါတယ်။  Map() methods မှာရှိသုံးတဲ့ Set() method သည် Set() method မှာရှိတဲ့ add() method နဲ့တူပါတယ်။ ပထမ argument သည် key ဖြစ်ပြီး ဒုတိယ argument သည် value ဖြစ်တယ်။ 
+
+const rest = new Map();
+rest.set('name', 'Mahar Myanmar');
+rest.set(1, 'Yangon,Myanmar');
+
+Map ထဲမှာရှိတဲ့ data ကို ပြန်ထုတ်ချင်တယ် ဆိုရင် 
+rest.get(key);
+
+Map ထဲမှာရှိတဲ့ data တွေရှိမရှိ စစ်ချင်ရင်
+rest.has(key); // return true/false
+
+Map ထဲမှာရှိတဲ့ data တွေကို ဖျက်ချင်ရင် key ကို base ထားပြီး ဖျက်လို့ရတယ်။ 
+rest.delete(key);
+
+Map ရဲ့ element အရေအတွက်ကို ကြည့်ချင်ရင် 
+rest.size();
+
+Map ထဲမှာရှိတဲ့ data အားလုံးကို ဖျက်ချင်ရင် 
+rest.clear();
 
 
 builtin Function
