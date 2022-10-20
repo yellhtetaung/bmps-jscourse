@@ -763,6 +763,9 @@ rest.size();
 Map ထဲမှာရှိတဲ့ data အားလုံးကို ဖျက်ချင်ရင် 
 rest.clear();
 
+Object ကနေ Map ကိုပြောင်းချင်ရင် 
+new Map(Object.entries(openingHours));
+
 
 builtin Function
 -----------------
